@@ -21,7 +21,7 @@ public class CatalogController {
 
         // Get list of product from product service
         List<Object> prodcuts = restTemplate.getForObject(
-                "http://localhost:8080/products", List.class);
+                "http://product-service/products", List.class);
         catalog.setProducts(prodcuts);
 
         return catalog;
