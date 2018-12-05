@@ -20,9 +20,9 @@ public class CatalogController {
         catalog.setId(id);
 
         // Get list of product from product service
-        List<Object> prodcuts = restTemplate.getForObject(
+        List<Object> products = restTemplate.getForObject(
                 "http://product-service/products", List.class);
-        catalog.setProducts(prodcuts);
+        catalog.setProducts(products);
 
         return catalog;
     }
